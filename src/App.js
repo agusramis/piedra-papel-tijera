@@ -1,7 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    const pjs = fetch("https://rickandmortyapi.com/api/character");
+    console.log("🚀 ~ useEffect ~ pjs:", pjs);
+  });
   return (
     <div className="App">
       <header className="App-header">
